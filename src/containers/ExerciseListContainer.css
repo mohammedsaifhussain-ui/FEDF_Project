@@ -1,0 +1,25 @@
+.excontainer { display: flex; flex-direction: column; gap: 24px; }
+
+.excontainer__header {
+  display: flex; align-items: flex-end;
+  justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.excontainer__sub { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+.excontainer__filters { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.excontainer__filter {
+  padding: 6px 16px; border-radius: 999px;
+  border: 1px solid var(--border); background: transparent;
+  color: var(--muted); font-family: 'DM Sans', sans-serif;
+  font-size: 13px; font-weight: 500; cursor: pointer;
+  transition: all var(--transition);
+}
+.excontainer__filter:hover { border-color: var(--accent); color: var(--accent); }
+.excontainer__filter--active { background: var(--accent); border-color: var(--accent); color: #000; font-weight: 600; }
+
+.excontainer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+}

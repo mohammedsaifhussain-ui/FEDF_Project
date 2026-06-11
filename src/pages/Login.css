@@ -1,0 +1,58 @@
+.login { display: flex; align-items: center; justify-content: center; min-height: calc(100vh - 140px); }
+
+.login__card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 40px;
+  width: 100%; max-width: 420px;
+  display: flex; flex-direction: column; gap: 24px;
+}
+
+.login__header { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+
+.login__logo {
+  width: 48px; height: 48px; background: var(--accent); color: #000;
+  font-family: 'Bebas Neue', sans-serif; font-size: 20px;
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
+}
+
+.login__title { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 0.04em; }
+.login__sub   { font-size: 13px; color: var(--muted); }
+
+.login__hint {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 10px 14px;
+  font-size: 13px; color: var(--muted);
+}
+.login__hint code {
+  background: var(--bg); color: var(--accent);
+  padding: 2px 8px; border-radius: 4px; font-size: 12px;
+}
+
+.login__form { display: flex; flex-direction: column; gap: 18px; }
+
+.login__field { display: flex; flex-direction: column; gap: 6px; }
+
+.login__label { font-size: 13px; font-weight: 600; color: var(--text); letter-spacing: 0.02em; }
+
+.login__input {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 11px 14px;
+  color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 14px;
+  transition: border-color var(--transition); outline: none;
+  width: 100%;
+}
+.login__input:focus       { border-color: var(--accent); }
+.login__input--error      { border-color: var(--danger); }
+.login__input::placeholder { color: var(--muted); }
+
+.login__error { font-size: 12px; color: var(--danger); }
+
+.login__checkbox { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); cursor: pointer; }
+.login__checkbox input { accent-color: var(--accent); width: 15px; height: 15px; cursor: pointer; }
+
+.login__auth-error {
+  background: rgba(255,77,77,0.1); border: 1px solid var(--danger);
+  border-radius: var(--radius-sm); padding: 10px 14px;
+  font-size: 13px; color: var(--danger); text-align: center;
+}

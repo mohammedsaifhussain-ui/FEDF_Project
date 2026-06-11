@@ -1,0 +1,48 @@
+.ecard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition);
+}
+.ecard:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.5); border-color: #2a2a2a; }
+.ecard--queued { border-color: var(--accent); }
+
+/* Image */
+.ecard__img-wrap { position: relative; height: 170px; overflow: hidden; background: var(--surface2); }
+.ecard__img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.82); transition: transform 0.4s ease; }
+.ecard:hover .ecard__img { transform: scale(1.06); }
+.ecard__fallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px; }
+.ecard__badge {
+  position: absolute; top: 10px; left: 10px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 999px; color: #000;
+}
+.ecard__overlay {
+  position: absolute; inset: 0;
+  background: rgba(200,241,53,0.15);
+  display: flex; align-items: center; justify-content: center;
+}
+.ecard__overlay span {
+  font-family: 'Bebas Neue', sans-serif; font-size: 20px;
+  letter-spacing: 0.1em; color: var(--accent);
+}
+
+/* Body */
+.ecard__body { padding: 16px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.ecard__name { font-family: 'Bebas Neue', sans-serif; font-size: 21px; letter-spacing: 0.03em; line-height: 1; }
+
+/* Stats row */
+.ecard__stats { display: flex; align-items: center; background: var(--surface2); border-radius: var(--radius-sm); overflow: hidden; }
+.ecard__stat  { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 9px 4px; gap: 2px; }
+.ecard__val   { font-family: 'Bebas Neue', sans-serif; font-size: 22px; line-height: 1; }
+.ecard__lbl   { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.ecard__sep   { width: 1px; height: 32px; background: var(--border); }
+
+/* Actions */
+.ecard__actions { display: flex; gap: 8px; }
+.ecard__detail-btn { flex: 1; font-size: 12px; padding: 8px; }
+.ecard__add-btn    { flex: 2; font-size: 12px; padding: 8px; }
+.ecard__add-btn--added { background: var(--surface2); color: var(--accent); border: 1px solid var(--accent); cursor: not-allowed; font-family: 'DM Sans', sans-serif; font-weight: 600; }

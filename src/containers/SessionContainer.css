@@ -1,0 +1,39 @@
+.sessioncon { display: flex; flex-direction: column; gap: 24px; }
+
+.sessioncon__header { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.sessioncon__sub { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+.sessioncon__progress-wrap { display: flex; align-items: center; gap: 12px; }
+.sessioncon__bar { flex: 1; height: 6px; background: var(--surface2); border-radius: 999px; overflow: hidden; }
+.sessioncon__fill { height: 100%; background: var(--accent); border-radius: 999px; transition: width 0.4s ease; }
+.sessioncon__pct { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--accent); min-width: 44px; text-align: right; }
+
+.sessioncon__list { display: flex; flex-direction: column; gap: 10px; }
+
+.sessioncon__row {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 20px;
+  transition: all var(--transition);
+}
+.sessioncon__row--done { opacity: 0.5; border-color: var(--accent); background: rgba(200,241,53,0.04); }
+
+.sessioncon__info  { display: flex; flex-direction: column; gap: 4px; }
+.sessioncon__name  { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.03em; }
+.sessioncon__detail { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+.sessioncon__actions { display: flex; align-items: center; gap: 8px; }
+.sessioncon__done    { font-size: 13px; padding: 8px 16px; }
+.sessioncon__badge   { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); padding: 6px 14px; border: 1px solid var(--accent); border-radius: var(--radius-sm); }
+.sessioncon__remove  { width: 32px; height: 32px; border-radius: 6px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all var(--transition); display: flex; align-items: center; justify-content: center; }
+.sessioncon__remove:hover { border-color: var(--danger); color: var(--danger); }
+
+.sessioncon__empty {
+  text-align: center; padding: 60px 20px; color: var(--muted);
+  background: var(--surface); border: 1px dashed var(--border); border-radius: var(--radius);
+}
+.sessioncon__complete {
+  text-align: center; padding: 16px;
+  background: rgba(200,241,53,0.08); border: 1px solid var(--accent);
+  border-radius: var(--radius); color: var(--accent); font-weight: 600;
+}
